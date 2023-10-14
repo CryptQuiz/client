@@ -25,7 +25,6 @@ module.exports = {
 
       },
       width: {
-        'custom-red': '1494px',
         '1080' : '1080',
         '30' : '120',
         '520' : '32.5rem'
@@ -35,7 +34,7 @@ module.exports = {
       },
       borderRadius: {
         '50': '50px',
-        '40' : '39px',
+        '40' : '40px',
         '20' : '20px',
       },
       height :{

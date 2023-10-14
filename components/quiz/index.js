@@ -4,7 +4,7 @@ import Image from "next/image";
 const Quiz = () => {
   return (
     <div className="bg-neu-yellow">
-      <div className="group container w-custom-red bg-neu-white rounded-40 border border-black border-r-8 border-b-8 h-quiz-h mt-10">
+      <div className="container w-4/5 bg-neu-white rounded-40 border border-black border-r-8 border-b-8 h-quiz-h mt-10">
         <div>
           <Image
             src="/images/ust-k.png"
@@ -86,38 +86,46 @@ const Quiz = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row space-x-4">
-              <div className="w-20 h-20 items-center justify-center rounded-20 border border-black border-r-4 border-b-4">
-                <Image
-                src="/images/spon1.png"
-                alt="sponsor"
-                width={52}
-                height={34}
-              />
+            <div className="flex flex-row justify-center items-end space-x-4">
+              <div className="w-20 h-20 px-auto py-auto rounded-20 border border-black border-r-4 border-b-4">
+                <div className="flex justify-center items-center h-full">
+                  <Image
+                    src="/images/spon1.png"
+                    alt="sponsor"
+                    width={52}
+                    height={34}
+                  />
+                </div>
               </div>
               <div className="w-20 h-20 rounded-20 border border-black border-r-4 border-b-4">
-                <Image
-                src="/images/spon2.png"
-                alt="sponsor"
-                width={40}
-                height={40}
-              />
+                <div className="flex justify-center items-center h-full">
+                  <Image
+                    src="/images/spon2.png"
+                    alt="sponsor"
+                    width={40}
+                    height={40}
+                  />
+                </div>
               </div>
               <div className="w-20 h-20 rounded-20 border border-black border-r-4 border-b-4">
-                <Image
-                src="/images/spon3.png"
-                alt="sponsor"
-                width={46}
-                height={38}
-              />
+                <div className="flex justify-center items-center h-full">
+                  <Image
+                    src="/images/spon3.png"
+                    alt="sponsor"
+                    width={46}
+                    height={38}
+                  />
+                </div>
               </div>
               <div className="w-20 h-20 rounded-20 border border-black border-r-4 border-b-4">
-                <Image
-                src="/images/spon4.png"
-                alt="sponsor"
-                width={40}
-                height={40}
-              />
+                <div className="flex justify-center items-center h-full">
+                  <Image
+                    src="/images/spon4.png"
+                    alt="sponsor"
+                    width={40}
+                    height={40}
+                  />
+                </div>
               </div>
             </div>
           </div>
