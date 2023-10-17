@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="bg-neu-yellow bg-no-repeat relative">
+      <body className="bg-neu-yellow bg-no-repeat relative ">
         {pathName !== "/" ? (
           <div className="bg-neu-yellow min-h-screen flex flex-col justify-center items-center">
-            <div className="container w-4/5 bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8 h-5/6">
+            <div className="container max-w-screen-xl w-full sm:w-4/5 md:w-3/4 lg:w-2/3 bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8 h-5/6">
               <div className="absolute top-4 left-64">
                 <Image
                   className="drop-shadow-[2px_2px_rgba(0,0,0,40)]"

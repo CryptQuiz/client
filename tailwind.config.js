@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     container : {
       center : true,
-      screens:{
-        lg: '1140px',
-        xl: '1140px',
-        '2xl': '1140px',
-      }
+      // screens:{
+      //   lg: '1140px',
+      //   xl: '1140px',
+      //   '2xl': '1140px',
+      // }
     },
     extend: {
       colors : {
