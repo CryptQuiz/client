@@ -7,7 +7,8 @@ const Join = () => {
                     <div className='flex flex-row justify-between'> 
                         <div className='flex flex-row space-x-3 items-center'>
                             <div>
-                                <Image 
+                                <Image
+                                className='max-w-12 max-h-12' 
                                 src="/images/clock.png"
                                 alt='clock'
                                 height={48}
@@ -20,6 +21,7 @@ const Join = () => {
                             <div className='text-xl font-bold'>1345 kişi</div>
                             <div>
                                 <Image
+                                className='max-w-12 max-h-12'
                                 src="/images/people.png"
                                 alt='clock'
                                 height={48}
@@ -29,13 +31,12 @@ const Join = () => {
                         </div>
                     </div>  
                 
-                        <div  className='flex flex-row justify-center relative'>
-                            <div className='absolute left-40 -top-4'>
+                        <div  className='flex flex-row justify-center'>
+                            <div className='relative left-4 -top-4 w-12 h-8 max-w-15 max-h-10'>
                                 <Image
                                 src="/images/katil.png"     
                                 alt='image'
-                                height={38}
-                                width={60}
+                                fill
                                 />
                             </div>  
                             <div className='text-8xl font-bold '><span className='drop-shadow-[2px_2px_rgba(0,0,0,40)]'>KATIL</span></div>

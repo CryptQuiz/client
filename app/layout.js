@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="bg-neu-yellow bg-no-repeat relative ">
+      <body className="bg-neu-yellow bg-no-repeat relative">
         {pathName !== "/" ? (
-          <div className="bg-neu-yellow min-h-screen flex flex-col justify-center items-center">
-            <div className="container max-w-screen-xl w-full sm:w-4/5 md:w-3/4 lg:w-2/3 bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8 h-5/6">
-              <div className="absolute top-4 left-64">
+          <div className="bg-neu-yellow h-screen flex flex-col justify-center items-center">
+            <div className="container w-4/5 bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8 h-5/6">
+              {/* <div className="absolute top-4 left-64">
                 <Image
                   className="drop-shadow-[2px_2px_rgba(0,0,0,40)]"
                   src="/images/ex1.png"
@@ -27,15 +27,15 @@ export default function RootLayout({ children }) {
                   width={136}
                   height={136}
                 />
-              </div>
+              </div> */}
               {pathName === "/quiz" ? (
                 <div>
                   <div className="h-4 bg-red-500 w-full rounded-t-40"></div>
                 </div>
               ) : null}
-              <div className="mt-3 pb-12 flex justify-between">
+              <div className="mt-3 pb-12 flex justify-between ">
                 {pathName === "/quiz" || pathName === "/description" ? (
-                  <div className="flex-none">
+                  <div className="relative flex-none h-auto w-24">
                     <Image
                       src="/images/sol.png"
                       alt="images"
@@ -48,12 +48,11 @@ export default function RootLayout({ children }) {
                 {children}
 
                 {pathName === "/quiz" || pathName === "/description" ? (
-                  <div className="flex-none">
-                    <Image
+                  <div className="relative flex-none h-auto w-24">
+                    <Image  
                       src="/images/sag.png"
                       alt="images"
-                      height={762}
-                      width={100}
+                      fill
                     />
                   </div>
                 ) : null}
