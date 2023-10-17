@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const LeaderBoard = () => {
   return (
-    <div className=' mx-auto w-full px-10'>
+    <div className=' mx-auto w-full px-10 py-6'>
       <h1 className='text-32 text-black font-bold text-center py-12 tracking-widest'>Truefeedback Quiz Yarışması Sonuçları</h1>
       {/* liderlik */}
 
@@ -12,7 +12,7 @@ const LeaderBoard = () => {
             <div className='h-3/5 w-1/3 space-y-5'>
                 <div>
                     <Image
-                    className='w-44 h-44 object-cover rounded-full'
+                    className='w-44 h-44 object-cover rounded-full border-8 border-neu-brown mx-auto'
                     src = '/images/icardi.jpg'
                     alt = 'icardi'
                     width = {210}
@@ -26,7 +26,7 @@ const LeaderBoard = () => {
             <div className='h-full w-1/3 space-y-5'>
                 <div>
                     <Image
-                    className='w-44 h-44 object-cover rounded-full drop-shadow-[2px_2px_rgba(0,0,0,40)]'
+                    className='w-44 h-44 object-cover rounded-full border-8 border-neu-yellow3  mx-auto drop-shadow-[2px_2px_rgba(0,0,0,40)]'
                     src="/images/icardi.jpg"
                     alt = 'icardi'
                     width = {210}
@@ -40,7 +40,7 @@ const LeaderBoard = () => {
             <div className='h-4/5 w-1/3 space-y-5'>
                 <div>
                     <Image
-                    className='w-44 h-44 object-cover rounded-full'
+                    className='w-44 h-44 object-cover rounded-full mx-auto'
                     src="/images/icardi.jpg"
                     alt = 'icardi'
                     width = {210}

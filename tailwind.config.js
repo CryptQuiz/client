@@ -9,9 +9,9 @@ module.exports = {
     container : {
       center : true,
       screens:{
-        lg: '1280px',
-        xl: '1280px',
-        '2xl': '1280px',
+        lg: '1140px',
+        xl: '1140px',
+        '2xl': '1140px',
       }
     },
     extend: {
@@ -34,6 +34,7 @@ module.exports = {
         "neu-brown" : "#C5773E",
         "neu-yellow3" : "#FBCB22",
         "neu-gray" : "#B0AFAA",
+
 
 
       },

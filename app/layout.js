@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
             {/* sponsor */}
-            {pathName === "/quiz" ? <Sponsor /> : null}
+            {pathName === "/quiz" || pathName === "/leaderBoard" ? <Sponsor /> : null}
           </div>
         ) : (
           <>{children}</>
