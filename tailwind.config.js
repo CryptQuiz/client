@@ -34,9 +34,6 @@ module.exports = {
         "neu-brown" : "#C5773E",
         "neu-yellow3" : "#FBCB22",
         "neu-gray" : "#B0AFAA",
-
-
-
       },
       width: {
         '1080' : '1080',
@@ -46,9 +43,12 @@ module.exports = {
       },
       fontSize :{
         "40" : "2.5rem",
-        "32" : "2rem"
+        "32" : "2rem",
+        "12":"1rem",
+        "8":"0.75rem"
       },
       borderRadius: {
+        '10':'10px',
         '50': '50px',
         '40' : '40px',
         '20' : '20px',
