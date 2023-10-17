@@ -2,48 +2,47 @@ import React from 'react'
 import Image from 'next/image'
 
 const JoinSponsor = () => {
+    const sponsorArr=[
+        {
+        img:"/images/spon11.png",
+        compName:"bla bla coin"
+    },
+    {
+        img:"/images/spon22.png",
+        compName:"bla bla coin"
+
+    },
+    {
+        img:"/images/spon33.png",
+        compName:"bla bla coin"
+
+    },
+    {
+        img:"/images/spon44.png",
+        compName:"bla bla coin"
+
+    },
+]
   return (
     <div className='flex flex-row justify-between items-center h-1/3 space-x-6'>
-                    <div className='flex flex-col items-center justify-around text-center bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
-                        <Image
-                        className='object-cover'
-                    src="/images/spon11.png"
+        {sponsorArr.map((i,index)=>(
+            <div key={index} className='flex relative gap-2 flex-col items-center justify-around text-center bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
+                        <div 
+                        className='h-24 w-full relative'
+                        >
+                        <Image                        
+                    src={i.img}
                     alt='images' 
-                    width={100}
-                    height={100}
+                   fill
                         />
-                        <div className='text-black font-semibold'>Bla bla Coin</div>
+                        </div>
+                        <div className='text-black font-semibold'>{i.compName}</div>
                     </div>
-                    <div className='flex flex-col items-center justify-around text-center bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
-                    <Image
-                    className='object-cover'
-                    src="/images/spon22.png"
-                    alt='images'
-                    width={100}
-                    height={100}
-                        />
-                        <div className='text-black font-semibold'>Bla bla Coin</div>
-                    </div>
-                    <div className='flex flex-col items-center justify-around text-center bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
-                    <Image
-                    src="/images/spon33.png"
-                    alt='images'
-                    width={100}
-                    height={100}
-                        />
-                        <div className='text-black font-semibold'>Bla bla Coin</div>
-                    </div>
-                    <div className='flex flex-col items-center justify-around text-center bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
-                    <Image
-                    src="/images/spon44.png"
-                    alt='images'
-                    width={91}
-                    height={91}
-                        />
-                        <div className='text-black font-semibold'>Bla bla Coin</div>
-                    </div>
+        ))}
+                     
+                 
                 </div>
   )
 }
 
-export default JoinSponsor
+export default JoinSponsor

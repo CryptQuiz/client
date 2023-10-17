@@ -19,7 +19,7 @@ const Description = () => {
           </div>
         
         {/* alt container */}
-        <div className='flex flex-row  h-full mt-8 space-x-10'>
+        <div className='container flex h-full mt-8 space-x-10'>
             {/* ilk üç */}
             <Stats/>
             <div className='flex flex-col w-5/6 space-y-8 h-5/6'> 

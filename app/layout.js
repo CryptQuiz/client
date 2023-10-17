@@ -11,7 +11,6 @@ import Sponsor from "@/components/sponsor";
 
 export default function RootLayout({ children }) {
   const pathName = usePathname();
-  console.log("aq" + pathName);
 
   return (
     <html lang="en">
