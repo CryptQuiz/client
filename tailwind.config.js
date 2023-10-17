@@ -31,6 +31,9 @@ module.exports = {
         "neu-green4" : "#C7F3BB",
         "neu-pink4" : "#FBDFFF",
         "neu-purple2" : "#A488EF", 
+        "neu-brown" : "#C5773E",
+        "neu-yellow3" : "#FBCB22",
+        "neu-gray" : "#B0AFAA",
 
 
       },

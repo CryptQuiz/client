@@ -19,9 +19,9 @@ const Quiz = () => {
             />
           </div>
 
-          <div className="flex-grow">
-            
-          </div>
+
+
+
 
           <div className="flex-none">
             <Image

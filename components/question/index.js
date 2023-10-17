@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const Question = () => {
   return (
-    <div>
-      <div className="flex-none h-48 bg-neu-orange w-10/12 mx-auto flex flex-row relative items-center justify-center mt-10 rounded-20 border border-black border-r-4 border-b-4">
+  
+      <div className="flex-none h-48 bg-neu-orange w-full mx-auto flex flex-row relative items-center justify-center mt-10 rounded-20 border border-black border-r-4 border-b-4">
               <div className="bg-neu-blue w-30 text-3xl absolute -top-4 -left-12 py-1 px-4 rounded-20 border border-black border-r-4 border-b-4">
                 3/10
               </div>
@@ -20,7 +20,7 @@ const Question = () => {
                 />
               </div>
             </div>
-    </div>
+    
   )
 }
 
