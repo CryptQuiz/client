@@ -17,37 +17,26 @@ export default function RootLayout({ children }) {
       <body className="bg-neu-yellow bg-no-repeat relative">
         {pathName !== "/" ? (
           <div className="bg-neu-yellow h-screen flex flex-col justify-center items-center">
-            <div className="container w-4/5 bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8 h-5/6">
-              {/* <div className="absolute top-4 left-64">
-                <Image
-                  className="drop-shadow-[2px_2px_rgba(0,0,0,40)]"
-                  src="/images/ex1.png"
-                  alt="images"
-                  width={136}
-                  height={136}
-                />
-              </div> */}
+            <div className="container w-[80vw]  h-[80vh] bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8">
+            
               {pathName === "/quiz" ? (
                 <div>
                   <div className="h-4 bg-red-500 w-full rounded-t-40"></div>
                 </div>
               ) : null}
-              <div className="mt-3 pb-12 flex justify-between ">
-                {pathName === "/quiz" || pathName === "/description" ? (
-                  <div className="relative flex-none h-auto w-24">
+              <div className=" flex items-center justify-between ">
+                {pathName === "/quiz" || pathName === "/description" || pathName === "/dashboard"? (
+                  <div className="relative flex-none  w-[6vw] h-[70vh]">
                     <Image
                       src="/images/sol.png"
                       alt="images"
-                      height={762}
-                      width={100}
+                    fill
                     />
                   </div>
                 ) : null}
-
                 {children}
-
-                {pathName === "/quiz" || pathName === "/description" ? (
-                  <div className="relative flex-none h-auto w-24">
+                {pathName === "/quiz" || pathName === "/description" || pathName === "/dashboard" ? (
+                  <div className="relative flex-none  w-[6vw] h-[70vh]">
                     <Image  
                       src="/images/sag.png"
                       alt="images"
