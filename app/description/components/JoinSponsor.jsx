@@ -24,9 +24,9 @@ const JoinSponsor = () => {
     },
 ]
   return (
-    <div className='flex flex-row justify-between items-center h-1/3 space-x-6'>
+    <div className='flex flex-row justify-between items-center h-[20vh] space-x-6'>
         {sponsorArr.map((i,index)=>(
-            <div key={index} className='flex relative gap-2 flex-col items-center justify-around text-center
+            <div key={index} className='flex relative flex-col items-center justify-around text-center
              bg-white p-4 w-1/4 h-full rounded-20 border border-black border-r-8 border-b-8'>
                         <div 
                        style={{width: '100%', height: '100%', position: 'relative'}}

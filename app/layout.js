@@ -14,44 +14,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="bg-neu-yellow bg-no-repeat relative">
-        {pathName !== "/" ? (
-          <div className="bg-neu-yellow h-screen flex flex-col justify-center items-center">
-            <div className="container w-[80vw]  h-[80vh] bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8">
-            
-              {pathName === "/quiz" ? (
-                <div>
-                  <div className="h-4 bg-red-500 w-full rounded-t-40"></div>
-                </div>
-              ) : null}
-              <div className=" flex items-center justify-between ">
-                {pathName === "/quiz" || pathName === "/description" || pathName === "/dashboard"? (
-                  <div className="relative flex-none  w-[6vw] h-[70vh]">
-                    <Image
-                      src="/images/sol.png"
-                      alt="images"
-                    fill
-                    />
-                  </div>
-                ) : null}
+      <body className="bg-neu-yellow relative">
+        <div  className="bg-neu-yellow h-[100vh] w-[100vw] flex items-center justify-center ">
+            <div className="w-[80vw] h-[80vh] bg-neu-white rounded-40 overflow-hidden border border-black border-r-8 border-b-8">
+   
                 {children}
-                {pathName === "/quiz" || pathName === "/description" || pathName === "/dashboard" ? (
-                  <div className="relative flex-none  w-[6vw] h-[70vh]">
-                    <Image  
-                      src="/images/sag.png"
-                      alt="images"
-                      fill
-                    />
-                  </div>
-                ) : null}
-              </div>
-            </div>
-            {/* sponsor */}
-            {pathName === "/quiz" || pathName === "/leaderBoard" ? <Sponsor /> : null}
+                
           </div>
-        ) : (
-          <>{children}</>
-        )}
+          {/* {pathName === "/quiz" || pathName === "/leaderBoard" ? <Sponsor /> : null} */}
+          </div>
       </body>
     </html>
   );
