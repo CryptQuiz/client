@@ -6,6 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'mdh': { 'raw': '(min-height: 750px)' },
+      '2mdh': { 'raw': '(min-height: 900px)' },
+      'lgh': { 'raw': '(min-height: 1024px)' },
+    },
     container : {
       center : true,
       // screens:{
@@ -45,6 +50,7 @@ module.exports = {
         "40" : "2.5rem",
         "32" : "2rem",
         "12":"1rem",
+        "14":"1.25rem",
         "8":"0.75rem"
       },
       borderRadius: {
