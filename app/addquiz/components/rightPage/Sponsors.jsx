@@ -1,9 +1,10 @@
 "use client"
 import React from 'react'
 import Swiper from './Swiper'
-const Questions = () => {
+
+const Sponsors = () => {
   return (
-   <div className="flex flex-col w-auto overflow-hidden p-3 space-y-2 bg-[#D2D2D2] text-black rounded-20 border border-black border-r-4 border-b-4">
+    <div className="flex flex-col w-auto overflow-hidden p-3 space-y-2 bg-[#D2D2D2] text-black rounded-20 border border-black border-r-4 border-b-4">
     <div className='flex flex-row justify-between'>
     <span className="font-bold text-14">Soru Ekle</span>
     <div className='flex flex-row'>
@@ -17,4 +18,4 @@ const Questions = () => {
   )
 }
 
-export default Questions
+export default Sponsors

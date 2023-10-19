@@ -16,7 +16,7 @@ export default function App() {
     <>
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={30}
+        spaceBetween={15}
         modules={[Pagination]}
         className="mySwiper"
       >
@@ -58,16 +58,17 @@ export default function App() {
 
  function Questions(){
   return(
-    <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-10 border border-black bg-white">
-      <div>
-          <span className="font-bold text-8">12.Soru: Blockchain teknolojisinin temel özelliği nedir?</span>
-          <Trash size="32" color="#FF8A65"/>
-          </div>
-          <span className="font-normal text-8">A) Merkezi bir otorite tarafından kontrol edilir.</span>
-          <span className="font-normal text-8">B) Tüm veriler açıkça görülebilir ve değiştirilebilir.</span>
-          <span className="font-normal text-8">C) İşlem hızını artırır.</span>
-          <span className="font-normal text-8">D) İşlemlerin gizliliğini korur ve değişmez bir kayıt tutar</span>
-          
-          </div>
+    <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-0 border border-black bg-white ">
+    <div className="flex flex-row justify-between p-2  w-full items-start ">
+        <span className=" flex items-start justify-start font-bold text-xs">12.Soru: Blockchain teknolojisinin temel özelliği nedir?</span>
+        <Trash size="24" color="#FF8A65"/>
+        </div>
+        <div className="flex flex-col items-start  w-full h-full space-y-2">
+        <span className="font-normal  text-xs">A) Merkezi bir otorite tarafından kontrol edilir.</span>
+        <span className="font-normal  text-xs">B) Tüm veriler açıkça görülebilir ve değiştirilebilir.</span>
+        <span className="font-normal  text-xs">C) İşlem hızını artırır.</span>
+        <span className="font-normal  text-xs">D) İşlemlerin gizliliğini korur ve değişmez bir kayıt tutar</span>
+        </div>
+        </div>
   )
 }
