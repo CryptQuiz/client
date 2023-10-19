@@ -12,7 +12,7 @@ const SponsorEntry = () => {
     </div>
     
     <div className='flex flex-row space-x-2'>
-        <textarea style={{borderRadius:"10px", resize: "none",padding:"4px"}} className=' border-black border ' placeholder='Sponsorluk bedeli giriniz...' name="" id="" cols="50" rows="1"></textarea>
+        <textarea style={{borderRadius:"10px", resize: "none",padding:"4px"}} className=' border-black border ' placeholder='Sponsorluk bedeli giriniz...' name="" id="" cols="50" rows="6"></textarea>
     <button className=' px-20 py-2 text-14 font-bold bg-[#C5A1FF] rounded-10 border border-black border-r-4 border-b-4'>Logo</button>
 
     </div>
