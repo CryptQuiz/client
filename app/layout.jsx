@@ -18,22 +18,19 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lexend+Mega:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
       <body className="relative">
-        <div className="bg-neu-yellow h-[100vh] w-[100vw] flex flex-col items-center justify-center py-8 lg:py-0"
+        <div className="bg-neu-yellow h-[100vh] w-[100vw] flex flex-col items-center justify-center pb-4 lg:pb-0"
         style={{
-          // background-size: 40px 40px;
-          // background-image:
-          //   linear-gradient(to right, grey 1px, transparent 1px),
-          //   linear-gradient(to bottom, grey 1px, transparent 1px);
-          backgroundSize: "40px 40px",
+          backgroundSize: "64px 64px",
           backgroundImage:
             "linear-gradient(to right, #505050 1px, transparent 1px),linear-gradient(to bottom, #505050 1px, transparent 1px)",
         }}
         >
-          <header className="lg:hidden flex flex-row justify-between items-center w-[80vw] h-[4vh] my-4">
+          <header className="lg:hidden flex flex-row justify-between items-center w-[90vw] h-[4vh] my-4">
           <Link href="/home"> 
             <div>
               <Image
@@ -57,7 +54,7 @@ export default function RootLayout({ children }) {
             </Link>
           </header>
           {pathName !== "/profile" ? 
-            <div className="w-[80vw] h-[85vh] lg:h-[80vh] bg-neu-white rounded-20 lg:rounded-40 overflow-hidden border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8">
+            <div className="w-[90vw] lg:w-[80vw] h-[95vh] lg:h-[80vh] bg-neu-white rounded-20 lg:rounded-40 overflow-hidden border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8">
               {children}
             </div>
            : <div>

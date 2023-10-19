@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Join = () => {
   return (
-    <div className=' bg-neu-purple2 h-[11vh] lg:h-[41vh] text-white flex flex-col justify-between p-0 lg:p-5 rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8 font-lexend'>
+    <div className=' bg-neu-purple2 h-[12vh] lg:h-[41vh] text-white flex flex-col justify-between p-0 lg:p-5 rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8 font-lexend'>
                     <div className='hidden lg:flex flex-row justify-between'> 
                         <div className='flex flex-row space-x-3 items-center'>
                             <div>
@@ -39,7 +39,7 @@ const Join = () => {
                                 fill
                                 />
                             </div>  
-                            <div className='text-32 lg:text-8xl font-bold p-4 lg:p-0'><span className='drop-shadow-[2px_2px_rgba(0,0,0,40)]'>KATIL</span></div>
+                            <div className='text-32 lg:text-8xl font-bold lg:p-0'><span className='drop-shadow-[2px_2px_rgba(0,0,0,40)]'>KATIL</span></div>
                         </div>
                         
                         <div className='hidden lg:block text-xs font-bold mx-24 text-center'>
