@@ -16,6 +16,9 @@ import Link from "next/link";
 export default function RootLayout({ children }) {
   const pathName = usePathname();
 
+  // Use useMediaSize to get the current size of the screen
+
+  
   return (
     <html lang="en">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -28,6 +31,7 @@ export default function RootLayout({ children }) {
           backgroundSize: "64px 64px",
           backgroundImage:
             "linear-gradient(to right, #505050 1px, transparent 1px),linear-gradient(to bottom, #505050 1px, transparent 1px)",
+            
         }}
         >
           <header className="lg:hidden flex flex-row justify-between items-center w-[90vw] h-[4vh] my-4">

@@ -6,8 +6,18 @@ import Join from './components/Join'
 import JoinSponsor from './components/JoinSponsor'
 import Header from './components/header'
 
+import useScreenSize from '@/hooks/useScreenSize';
+
 
 const Description = () => {
+
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+  if(screenSize.width>1024){
+    console.log('screen size is bigger than 1024');
+  }
+  }, [screenSize]);
   
   return (
     <div className='flex justify-between m-4 lg:m-0'>
@@ -35,13 +45,24 @@ const Description = () => {
                 {/* sağ */}
                 <div className='flex flex-col justify-between w-[81vw] lg:w-[60vw] space-y-5'>
                   {/* katıl */}
-                <div id='join'>
+                {
+                  screenSize.width >768 ? (<>
+                    <div id='join'>
                   <Join/>
                 </div>
                 {/* sponsor */}
                 <div id='sponsor'>
                   <JoinSponsor/>
+                </div></>):(<>
+                  <div id='sponsor'>
+                  <JoinSponsor/>
                 </div>
+                  <div id='join'>
+                  <Join/>
+                </div>
+                {/* sponsor */}
+               </>)
+                }
                 </div>
             </div>
       </div>
