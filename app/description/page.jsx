@@ -8,29 +8,30 @@ import SponTime from './components/SponTime'
 
 const Description = () => {
   return (
-    <div className='flex justify-between'>
-        <div className='relative h-[75vh] w-[8vh] mt-6'>
+    <div className='flex justify-between m-4 lg:m-0'>
+        <div className='hidden lg:block relative h-[75vh] w-[8vh] mt-6'>
         <Image
           className='h-full w-full'
           src="/images/sol.png"
           alt="images"
           fill
+          
         />
       </div>
 
-      <div className='flex flex-col justify-center w-[65vw]'>
+      <div className='flex flex-col justify-center w-[65vw] space-y-4 lg:space-y-0'>
           {/* sponsor ve zaman */}
-          <div className='h-[10vh]'>
+          <div className='h-[15vh] lg:h-[10vh]'>
           <SponTime/>
           </div>
             {/* alt container */}
-            <div className='flex flex-row h-[60vh] justify-between space-x-10'>
+            <div className='flex flex-col lg:flex-row h-[60vh] justify-between space-x-0 lg:space-x-10 '>
                 {/* ilk üç */}
-                <div className='w-[25vw]'>
+                <div className='w-[70vw] lg:w-[25vw]'>
                 <Stats/>  
                 </div>
                 {/* sağ */}
-                <div className='flex flex-col justify-between w-[60vw] space-y-5'>
+                <div className='flex flex-col justify-between w-[70vw] lg:w-[60vw] space-y-5'>
                   {/* katıl */}
                 <div>
                   <Join/>
@@ -43,7 +44,7 @@ const Description = () => {
             </div>
       </div>
 
-      <div className='relative h-[75vh] w-[8vh] mt-6'>
+      <div className='hidden lg:block relative h-[75vh] w-[8vh] mt-6'>
         <Image
           className='h-full w-full'
           src="/images/sag.png"
@@ -53,6 +54,6 @@ const Description = () => {
       </div> 
     </div>
   )
-}
+} 
 
 export default Description

@@ -48,13 +48,15 @@ module.exports = {
       },
       fontSize :{
         "40" : "2.5rem",
-        "32" : "2rem"
+        "32" : "2rem",
+        "8" : "0.5rem",
       },
       borderRadius: {
         '50': '50px',
         '40' : '40px',
         '20' : '20px',
         '80' : '80px',
+        '10' : '10px',
       },
       height :{
         "quiz-h" : "768px"
