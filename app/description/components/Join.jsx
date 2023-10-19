@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Join = () => {
   return (
-    <div className=' bg-neu-purple2 h-[11vh] lg:h-[41vh] text-white flex flex-col justify-between p-0 lg:p-5 rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8'>
+    <div className=' bg-neu-purple2 h-[11vh] lg:h-[41vh] text-white flex flex-col justify-between p-0 lg:p-5 rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8 font-lexend'>
                     <div className='hidden lg:flex flex-row justify-between'> 
                         <div className='flex flex-row space-x-3 items-center'>
                             <div>

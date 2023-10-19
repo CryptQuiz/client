@@ -25,7 +25,7 @@ const QueOption = () => {
   ];
 
   return (
-    <di v className="flex flex-wrap justify-between w-full font-bold">
+    <di v className="flex flex-wrap justify-between w-full font-bold font-public">
       {optionArr.map((i, index) => (
         <div key={index} className="flex-row w-[48%] pb-10">
           <div className={`flex ${i.color} items-center rounded-20 border border-black border-r-4 border-b-4 space-x-2`}>
