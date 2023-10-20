@@ -42,7 +42,7 @@ const AddQuestion = () => {
       <span className="font-bold text-14">Soru Ekle</span>
       <div className='flex flex-row space-x-2'>
         <input
-          className='w-full border-[2px] border-black p-1 rounded-10'
+          className='w-full border-[2px] border-black p-2 rounded-10'
           placeholder='Soruyu Giriniz...'
           value={soru}
           onChange={(e) => setSoru(e.target.value)}
@@ -54,7 +54,7 @@ const AddQuestion = () => {
           Ekle
         </button>
       </div>
-      <div className='flex flex-col space-y-2'>
+      <div className='flex flex-col space-y-3'>
         <div className='flex flex-row space-x-2 '>
           <input
             className='w-full border-[2px] border-black p-2 rounded-10'
