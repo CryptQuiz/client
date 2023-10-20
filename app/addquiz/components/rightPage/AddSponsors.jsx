@@ -21,7 +21,6 @@ const AddSponsors = () => {
   </div>
   </div>
     <SponsorEntry/>
-      <Sponsors/>
     </div>
   )
 }

@@ -8,13 +8,11 @@ const AddQuestion = () => {
   const [secenekC, setSecenekC] = useState('');
   const [secenekD, setSecenekD] = useState('');
   // hiç bi işe yaramayan bos state, props olarak yollanmadığı için eklemek zorundaydım (geçici çözüm)
-  const [bos, setbos] = useState('');
   
   const [sorular, setSorular] = useState([]);
 
   const handleEkleClick = () => {
     const yeniSoru = {
-      soruMetni: bos,
       soru,
       secenekA,
       secenekB,
@@ -86,7 +84,6 @@ const AddQuestion = () => {
           ></input>
         </div>
       </div>
-      
     </div>
     <div>
         <Questions sorular={sorular} handleSilClick={handleSilClick} />
