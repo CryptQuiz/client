@@ -25,7 +25,7 @@ const AddQuizGruops = ({items}) => {
     </div>
     </div>
     <AddQuestion/>
-<Questions/>
+{/* <Questions/> */}
     </div>
   )
 }
