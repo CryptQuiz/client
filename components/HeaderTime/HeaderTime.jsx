@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SponTime = () => {
+const HeaderTime = () => {
   return (
     <div className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-center lg:justify-between'>
             <div className='w-[81vw] h-[11vh] lg:w-[40vw] lg:h-[7vh] bg-neu-orange text-black text-xl lg:text-32 p-1 lg:p-3 font-bold rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8 font-lexend flex-nowrap overflow-hidden text-ellipsis text-start'>Truefeedback Quiz Yarışması</div>
@@ -16,4 +16,4 @@ const SponTime = () => {
   )
 }
 
-export default SponTime
+export default HeaderTime

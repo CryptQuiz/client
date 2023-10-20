@@ -1,13 +1,11 @@
 "use client";
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import Stats from './components/Stats'
-import Join from './components/Join'
-import JoinSponsor from './components/JoinSponsor'
-import Header from './components/header'
-
 import useScreenSize from '@/hooks/useScreenSize';
-
+import HeaderTime from '@/components/HeaderTime/headerTime';
+import Join from '@/components/Join/Join';
+import JoinSponsor from '@/components/JoinSponsor/JoinSponsor';
+import Stats from '@/components/Stats/Stats';
 
 const Description = () => {
 
@@ -34,13 +32,13 @@ const Description = () => {
       <div className='flex flex-col justify-center w-[65vw] space-y-4 lg:space-y-0'>
           {/* sponsor ve zaman */}
           <div className='h-[18vh] lg:h-[10vh]'>
-          <Header/>
+          <HeaderTime/>
           </div>
             {/* alt container */}
             <div className='flex flex-col lg:flex-row h-[60vh] justify-between space-x-0 lg:space-x-10 '>
                 {/* ilk üç */}
                 <div className='w-[81vw] lg:w-[25vw]'>
-                <Stats/>  
+                <Stats/> 
                 </div>
                 {/* sağ */}
                 <div className='flex flex-col justify-between w-[81vw] lg:w-[60vw] space-y-5'>
