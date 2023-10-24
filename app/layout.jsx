@@ -25,7 +25,12 @@ export default function RootLayout({ children }) {
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lexend+Mega:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-      <body className="relative">
+      <body className="relative bg-neu-yellow" style={{
+          backgroundSize: "64px 64px",
+          backgroundImage:
+            "linear-gradient(to right, #505050 1px, transparent 1px),linear-gradient(to bottom, #505050 1px, transparent 1px)",
+            
+        }}>
         <div className="bg-neu-yellow h-full lg:h-[100vh] w-[100vw] flex flex-col items-center justify-center pb-4 lg:pb-0"
         style={{
           backgroundSize: "64px 64px",

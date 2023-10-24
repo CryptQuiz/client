@@ -32,7 +32,9 @@ const QuizPage = () => {
         {/* Şıklar */}
         <Option/>
         {/* Sponsor */}
+        <div className=' h-[8vh] lg:h-[20vh]'>
         <Sponsor/>
+        </div>
       </div>
       <div className='hidden lg:block relative h-[75vh] w-[8vh] mt-6'>
         <Image
