@@ -1,8 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
+import Backend from '@/data/Backend'
+import axios from 'axios'
+
 
 
 const ProfileImage = () => {
+
+
+
+  const fetcher = async (url) => {
+    const res = await Backend.Root.getRoot().then((res) => {
+      console.log(res.data)
+    })
+    . catch((err) => {
+      console.log(err)
+    })
+  }
+
+  fetcher()
+
+
+
+
+
+
+
   return (
     <div className='flex flex-col justify-between items-center w-1/4 px-16 py-10 bg-neu-white border border-black border-b-8 border-r-8 rounded-50 space-y-8'>
         <div className="w-full relative pt-[100%]">
