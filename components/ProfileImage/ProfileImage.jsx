@@ -1,3 +1,5 @@
+
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Backend from '@/data/Backend'
@@ -8,14 +10,21 @@ import axios from 'axios'
 const ProfileImage = () => {
 
 
+  const [quiz, setQuiz] = React.useState([])
+
 
   const fetcher = async (url) => {
-    const res = await Backend.Root.getRoot().then((res) => {
-      console.log(res.data)
+    const res = await Backend.Quiz.getAllQuiz().then((res) => {
+      console.log(res)
+      setQuiz(res)
+
+      console.log(quiz[0].name)
     })
     . catch((err) => {
       console.log(err)
     })
+
+
   }
 
   fetcher()
@@ -29,6 +38,9 @@ const ProfileImage = () => {
   return (
     <div className='flex flex-col justify-between items-center w-1/4 px-16 py-10 bg-neu-white border border-black border-b-8 border-r-8 rounded-50 space-y-8'>
         <div className="w-full relative pt-[100%]">
+
+
+
           <Image
             src="/images/icardi.jpg"
             alt="profile"

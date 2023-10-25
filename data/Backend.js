@@ -11,6 +11,8 @@ const sendRequest = async (method, endpoint, data) => {
       url: `${BASE_URL}${endpoint}`,
       data,
     });
+
+    console.log(response.data);
     return response.data;
   } catch (error) {
     throw error;
@@ -23,6 +25,19 @@ const Backend = {
       return await sendRequest('GET', 'home');
     },
   },
+  Profile: {
+    getAllUser: async (id) => {
+      return await sendRequest('GET', `user/`);
+    }
+  }
+  ,
+  Quiz: {
+    getAllQuiz: async () => {
+      return await sendRequest('GET', `quiz/`);
+    },
+
+
+  }
 
 };
 
