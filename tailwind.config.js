@@ -42,6 +42,8 @@ module.exports = {
         "neu-gray2" : "#ADAA9D",
         "bgray" : "#505050",
         "blue1" : "#69D3E8",
+        "orange1" : "#F1BF0B",
+        "red1" : "#FF6B6B",
 
 
 
