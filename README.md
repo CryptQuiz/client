@@ -1,3 +1,5 @@
+```base uri:https://quiz-app9.onrender.com/``
+
 CryptQuiz API Dökümantasyonu
 Bu dökümantasyon, Proje Adı'nın API'sinin kullanımını açıklamaktadır. API, kullanıcılar ve quizlerle ilgili temel işlevleri destekler.
 
