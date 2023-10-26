@@ -1,4 +1,3 @@
-import { getCookie } from 'cookies-next'
 
 export const INDEV = process.env.NODE_ENV === 'development'
 // const apiurl = INDEV
@@ -27,10 +26,7 @@ export const api = {
     const request = await fetch(apiurl + endpoint, {
       method: 'POST',
       body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-        credentials: getCookie('pmc::credentials', { path: '/' })
-      }
+      
     })
 
     if ([200, 201].indexOf(request.status) !== -1) {
@@ -43,9 +39,7 @@ export const api = {
     const request = await fetch(apiurl + endpoint, {
       method: 'POST',
       body: data,
-      headers: {
-        credentials: getCookie('pmc::credentials', { path: '/' })
-      }
+      
     })
     if ([200, 201].indexOf(request.status) !== -1) {
       try {
@@ -58,9 +52,7 @@ export const api = {
   buffer: async (endpoint) => {
     const request = await fetch(apiurl + endpoint, {
       method: 'GET',
-      headers: {
-        credentials: getCookie('pmc::credentials', { path: '/' })
-      }
+      
     })
 
     if (request.status === 200) {
