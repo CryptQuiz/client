@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Swiper from './Swiper'
+import SponsorSwiper from './SponsorSwiper'
 
 const Sponsors = ({items,handleSilClick}) => {
   return (
@@ -15,7 +15,7 @@ const Sponsors = ({items,handleSilClick}) => {
     
     </div>
     <div className='w-full  h-[20vh] '>
-    <Swiper items={items} handleSilClick={handleSilClick}/>
+    <SponsorSwiper items={items} handleSilClick={handleSilClick}/>
     </div>
   </div>
   )

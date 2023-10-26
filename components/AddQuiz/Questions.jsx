@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Swiper from './Swiper'
+import QuestionsSwiper from './QuestionsSwiper'
 const Questions = ({ sorular, handleSilClick }) => {
   return (
    <div className="flex flex-col w-auto overflow-hidden p-3 space-y-2 bg-[#D2D2D2] text-black rounded-20 border border-black border-r-4 border-b-4">
@@ -11,7 +11,7 @@ const Questions = ({ sorular, handleSilClick }) => {
     </div>
     </div>
     <div className='w-full h-[20vh] '>
-    <Swiper sorular={sorular} handleSilClick={handleSilClick}/>
+    <QuestionsSwiper sorular={sorular} handleSilClick={handleSilClick}/>
     </div>
   </div>
   )

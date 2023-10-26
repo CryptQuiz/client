@@ -14,7 +14,6 @@ const Profile = () => {
         {/* recent quizes */}
         <RecentQuizes/>
       </div>
-
       {/* Stats */}
       <StatsCup/>
     </div>
