@@ -15,6 +15,11 @@ module.exports = {
       // }
     },
     extend: {
+      fontFamily:{
+        archivo : ['Archivo', 'sans-serif'],
+        lexend : ['Lexend Mega', 'sans-serif'],
+        public : ['Public Sans', 'sans-serif'],
+      },
       colors : {
         "neu-yellow" : "#FFFF00",
         "neu-pink" : "#FF00F6",
@@ -35,10 +40,17 @@ module.exports = {
         "neu-yellow3" : "#FBCB22",
         "neu-gray" : "#B0AFAA",
         "neu-gray2" : "#ADAA9D",
+        "bgray" : "#505050",
+        "blue1" : "#69D3E8",
+        "orange1" : "#F1BF0B",
+        "red1" : "#FF6B6B",
 
 
 
 
+      },
+      height: {
+        "6/7" : "85%",
       },
       width: {
         '1080' : '1080',
