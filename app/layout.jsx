@@ -17,15 +17,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body className="relative">
-      
-        <div className="relative bg-neu-yellow h-[100vh] w-[100vw] flex flex-col items-center justify-center py-8 lg:py-0">
-          {/* <PopUp/> */}
-        
-          <header className="lg:hidden flex flex-row justify-between items-center w-[80vw] h-[4vh] my-4">
-=======
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+     
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lexend+Mega:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -44,7 +36,6 @@ export default function RootLayout({ children }) {
         }}
         >
           <header className="lg:hidden flex flex-row justify-between items-center w-[90vw] h-[4vh] my-4">
->>>>>>> quiz
           <Link href="/home"> 
             <div>
               <Image

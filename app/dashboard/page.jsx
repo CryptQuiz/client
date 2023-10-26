@@ -1,13 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
-import CreateQuiz from "./components/CreateQuiz";
-import Statistics from "./components/Statistics";
-import Quizs from "./components/Quizs";
-=======
+
 import CreateQuiz from "@/components/Dashboard/CreateQuiz";
 import Statistics from "@/components/Dashboard/Statistics";
 import Quizs from "@/components/Dashboard/Quizs";
->>>>>>> quiz
 const page = () => {
   return (
     <div className="flex flex-row p-14 h-full space-x-8 w-full">
