@@ -15,8 +15,8 @@ const page = () => {
       <Image
        src="/images/quit.png"
        alt="profile"
-       width={104}
-       height={104}
+       width={100}
+       height={100}
       />
       </Link>
       <Link href='/dashboard' className='absolute left-[85vw] top-[8vh] '>
