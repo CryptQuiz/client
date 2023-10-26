@@ -31,8 +31,8 @@ const Join = () => {
                         </div>
                     </div>  
                 
-                        <div  className='flex flex-row justify-center items-center w-full h-full'>
-                            <div className='hidden lg:block relative left-4 -top-4 w-12 h-8 max-w-15 max-h-10'>
+                        <div  className='flex flex-row justify-center items-center w-full h-full relative'>
+                            <div className='hidden lg:block absolute left-44 top-16 w-12 h-8 max-w-15 max-h-10'>
                                 <Image
                                 src="/images/katil.png"     
                                 alt='image'

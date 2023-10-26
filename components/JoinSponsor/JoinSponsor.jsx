@@ -29,10 +29,10 @@ const JoinSponsor = () => {
             <div key={index} className='flex relative flex-col items-center justify-around text-center
              bg-white p-1 lg:p-4 w-1/4 h-full rounded-10 lg:rounded-20 border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8'>
                         <div 
-                       style={{width: '90%', height: '90%', position: 'relative'}}
+                       style={{width: '70%', height: '70%', position: 'relative'}}
                         >
                         <Image                        
-                    src={i.img}
+                    src={i.img} 
                     alt='images' 
                     layout='fill'
                     objectFit='contain'
