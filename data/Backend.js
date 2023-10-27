@@ -1,7 +1,7 @@
 import axios from 'axios';
 import api from './clients';
 
-const BASE_URL = "http://[::1]:32500/"
+const BASE_URL = "https://quiz-app9.onrender.com/"
 
 
 const sendRequest = async (method, endpoint, data) => {

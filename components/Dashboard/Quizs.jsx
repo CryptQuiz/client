@@ -28,16 +28,19 @@ const quizsArr = [
 const Quizs = () => {
 //   const [isPopUp, IsPopUp] = useStorken('isDrawing')
   return (
-    <div   className="flex flex-col px-3 w-full space-y-3 h-full bg-white rounded-20 border border-black border-r-4 border-b-4 overflow-y-auto">
-      <div className=" p-3">
-        <span className="text-black font-bold text-14">Quizler</span>
+    <div className="flex flex-col px-2 w-full  h-full bg-white rounded-20 border border-black
+     border-r-4 border-b-4 ">
+      <div className="p-2 ">
+        <span className="text-black font-bold text-16">Quizler</span>
       </div>
+      <div className=" flex flex-col px-1 overflow-y-auto gap-2">
 
       {quizsArr.map((i, index) => (
-        <button onClick={()=>IsPopUp.set(false)} key={index} className="gap-4">
+        <button  key={index} >
           <Quiz items={i} />
         </button>
       ))}
+      </div>
     </div>
   );
 };
