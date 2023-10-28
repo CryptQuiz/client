@@ -16,11 +16,11 @@ const SponsorEntry = () => {
     setSponsorName('');
   };
 
-  const handleSilClick = (index) => {
+  const handleDeleteClick = (index) => {
     // Tıklanan elemanı array'den kaldır
-    const yeniSponsorlar = [...sponsors];
-    yeniSponsorlar.splice(index, 1);
-    setSponsors(yeniSponsorlar);
+    const newSponsors = [...sponsors];
+    newSponsors.splice(index, 1);
+    setSponsors(newSponsors);
   };
 
   return (
@@ -56,14 +56,9 @@ const SponsorEntry = () => {
           LOGO
         </button>
       </div>
-
-{/* {sponsors.map((sponsor,index)=>(<div key={index} className='w-[10vw] h-[10vh] bg-red-600'>
-          {sponsor.sponsorName}
-          <button onClick={() => handleSilClick(index)}>Sil</button>
-        </div>))} */}
-     
     </div>
-      <Sponsors items={sponsors} handleSilClick={handleSilClick}/>
+
+      <Sponsors items={sponsors} handleDeleteClick={handleDeleteClick}/>
       </>
 
   );

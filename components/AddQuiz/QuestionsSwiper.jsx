@@ -10,7 +10,7 @@ import "./styles.css";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-export default function App({ sorular, handleSilClick }) {
+export default function App({ questions, handleDeleteClick }) {
   return (
     <>
   <Swiper
@@ -19,18 +19,18 @@ export default function App({ sorular, handleSilClick }) {
   modules={[Pagination]}
   className="mySwiper "
 >
-{sorular.map((items, index) => (
+{questions.map((items, index) => (
         <SwiperSlide key={index}>
            <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-10 border border-black bg-white ">
     <div className="flex flex-row justify-between p-2  w-full items-start ">
-        <span className=" flex items-start justify-start font-bold text-xs">{index +1}.Soru:{items.soru}</span>
-        <Trash onClick={() => handleSilClick(index)} size="28" color="#FF8A65" className="cursor-pointer"/>
+        <span className=" flex items-start justify-start font-bold text-xs">{index +1}.Soru:{items.question}</span>
+        <Trash onClick={() => handleDeleteClick(index)} size="28" color="#FF8A65" className="cursor-pointer"/>
         </div>
         <div className="flex flex-col items-start  w-full h-full space-y-2">
-        <span className="font-normal  text-xs">A) {items.secenekA}</span>
-        <span className="font-normal  text-xs">B) {items.secenekB}</span>
-        <span className="font-normal  text-xs">C) {items.secenekC}</span>
-        <span className="font-normal  text-xs">D) {items.secenekD}</span>
+        <span className="font-normal  text-xs">A) {items.optionA}</span>
+        <span className="font-normal  text-xs">B) {items.optionB}</span>
+        <span className="font-normal  text-xs">C) {items.optionC}</span>
+        <span className="font-normal  text-xs">D) {items.optionD}</span>
         </div>
         </div>
         </SwiperSlide>

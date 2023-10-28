@@ -13,7 +13,7 @@ import "./styles.css";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
 
-export default function App({items,handleSilClick}) {
+export default function App({items,handleDeleteClick}) {
   return (
     <>
       <Swiper
@@ -29,7 +29,7 @@ export default function App({items,handleSilClick}) {
         <span className=" flex items-start justify-start font-bold text-xs">
           {index +1}.Sponsor: {items.sponsorName}
         </span>
-        <Trash onClick={()=>handleSilClick(index)} className="cursor-pointer" size="28" color="#FF8A65" />
+        <Trash onClick={()=>handleDeleteClick(index)} className="cursor-pointer" size="28" color="#FF8A65" />
       </div>
       <div className="w-[8vw] h-[65%]  flex justify-start items-start  bg-[#D2D2D2] p-2 rounded-10 border border-black">
       <div style={{ width: "20vw", height: "100%", position: "relative" }} className="flex  bg-[#D2D2D2] justify-start items-start">

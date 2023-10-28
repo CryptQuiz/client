@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import PopUp from "@/components/PopUp/PopUp";
+import PopUp from "@/components/DashboardQuizsPopUp/PopUp";
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import { useSelector } from 'react-redux'
