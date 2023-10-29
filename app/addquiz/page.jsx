@@ -9,6 +9,11 @@ import AddSponsors from '@/components/AddQuiz/AddSponsors';
 import Image from 'next/image';
 import Link from 'next/link';
 const page = () => {
+
+
+
+
+
   return (
     <div className="flex flex-row mdh:p-14 p-8 h-full space-x-8 w-full">
       <Link href='/dashboard' className='absolute left-[7vw] top-[4vh] '>
