@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 
   
   return (
-    <Provider store={store}>
+
     <html lang="en">
      
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -61,15 +61,18 @@ export default function RootLayout({ children }) {
           </header>
           {pathName !== "/profile" & pathName !== "/home" & pathName !== "/" ? 
             <div className="w-[90vw] lg:w-[80vw] h-[95vh] lg:h-[80vh] bg-neu-white rounded-20 lg:rounded-40 overflow-hidden border border-black border-r-4 border-b-4 lg:border-r-8 lg:border-b-8">
-              {children}
+            
+            <Provider store={store}>  {children}
+    </Provider>
+
             </div>
            : <div>
-            {children}
+                    <Provider store={store}>  {children}
+    </Provider>
             </div>}
             <PopUp/>
         </div>
       </body>
     </html>
-    </Provider>
   );
 }

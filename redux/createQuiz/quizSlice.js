@@ -3,9 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   quiz: {
     name: "",
-    date: "",
-    time: "",
-    truechoices:0,
+date:"",
+    truechoice:0,
     questions: [
       {
         question: "",
