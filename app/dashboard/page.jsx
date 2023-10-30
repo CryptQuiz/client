@@ -14,6 +14,7 @@ export default function Page() {
   useEffect(() => {
     console.log("datdasha", quizData);
   }, []);
+
   return (
     <div className="flex flex-row p-14 h-full space-x-8 w-full">
       <div className=" h-full min-w-[30vw] overflow-hidden flex flex-col space-y-3">

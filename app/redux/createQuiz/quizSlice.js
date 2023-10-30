@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    quiz: {
+  quiz: {
     name: "",
-    date:"",
-    time:"",
-    truechoice:0,
+    date: "",
+    time: "",
+    truechoice: 0,
     questions: [
       {
         question: "",
@@ -14,11 +14,10 @@ const initialState = {
             key: "",
             value: "",
           },
-       
         ],
-        
       },
     ],
+    previousQuestions: [], // Önceki soruları içeren dizi
     rewards: [
       {
         rank: "",
@@ -33,7 +32,6 @@ const initialState = {
       },
     ],
   },
-// name:false,
 };
 
 export const quizSlice = createSlice({
@@ -42,11 +40,16 @@ export const quizSlice = createSlice({
   reducers: {
     setQuizDataByKey: (state, action) => {
       const { key, value } = action.payload;
-      console.log(key,value);
       state.quiz[key] = value;
+    },
+    addQuestion: (state, action) => {
+      const newQuestion = action.payload;
+      // Önceki soruları ekleyin
+      state.quiz.previousQuestions.push(state.quiz.questions);
+      state.quiz.questions.push(newQuestion);
     },
   },
 });
 
-export const { setQuizDataByKey } = quizSlice.actions;
+export const { setQuizDataByKey, addQuestion } = quizSlice.actions;
 export default quizSlice.reducer;

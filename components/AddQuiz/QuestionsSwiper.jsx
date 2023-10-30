@@ -1,59 +1,59 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Trash } from 'iconsax-react';
+import { Trash } from "iconsax-react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination"
+import "swiper/css/pagination";
 import "./styles.css";
-
 // import required modules
 import { Pagination } from "swiper/modules";
 
-export default function App({ questions, handleDeleteClick }) {
+import { useDispatch, useSelector } from "react-redux";
+import { addQuestion } from "../../app/redux/createQuiz/quizSlice";
+
+export default function App({ handleDeleteClick }) {
+  const quizData = useSelector((state) => state.createQuiz.quiz);
   return (
     <>
-  <Swiper
-  slidesPerView={"auto"}
-  spaceBetween={15}
-  modules={[Pagination]}
-  className="mySwiper "
->
-{questions.map((items, index) => (
-        <SwiperSlide key={index}>
-           <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-10 border border-black bg-white ">
-    <div className="flex flex-row justify-between p-2  w-full items-start ">
-        <span className=" flex items-start justify-start font-bold text-xs">{index +1}.Soru:{items.question}</span>
-        <Trash onClick={() => handleDeleteClick(index)} size="28" color="#FF8A65" className="cursor-pointer"/>
-        </div>
-        <div className="flex flex-col items-start  w-full h-full space-y-2">
-        <span className="font-normal  text-xs">A) {items.optionA}</span>
-        <span className="font-normal  text-xs">B) {items.optionB}</span>
-        <span className="font-normal  text-xs">C) {items.optionC}</span>
-        <span className="font-normal  text-xs">D) {items.optionD}</span>
-        </div>
-        </div>
-        </SwiperSlide>
-      ))}
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={15}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {quizData.questions.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-10 border border-black bg-white ">
+              <div className="flex flex-row justify-between p-2  w-full items-start ">
+                <span className=" flex items-start justify-start font-bold text-xs">
+                  {index + 1}. Soru: {item.question}
+                </span>
+                <Trash
+                  onClick={() => handleDeleteClick(index)}
+                  size="28"
+                  color="#FF8A65"
+                  className="cursor-pointer"
+                />
+              </div>
+              <div className="flex flex-col items-start  w-full h-full space-y-2">
+                <span className="font-normal  text-xs">
+                  A) {item.choices[0]?.value}
+                </span>
+                <span className="font-normal  text-xs">
+                  B) {item.choices[1]?.value}
+                </span>
+                <span className="font-normal  text-xs">
+                  C) {item.choices[2]?.value}
+                </span>
+                <span className="font-normal  text-xs">
+                  D) {item.choices[3]?.value}
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    
     </>
   );
-}
-
- function Questions(){
-  return(
-    <div className="flex flex-col w-full h-[20vh]  items-start space-x-2 rounded-0 border border-black bg-white ">
-    <div className="flex flex-row justify-between p-2  w-full items-start ">
-        <span className=" flex items-start justify-start font-bold text-xs">12.Soru: Blockchain teknolojisinin temel özelliği nedir?</span>
-        <Trash size="24" color="#FF8A65"/>
-        </div>
-        <div className="flex flex-col items-start  w-full h-full space-y-2">
-        <span className="font-normal  text-xs">A) Merkezi bir otorite tarafından kontrol edilir.</span>
-        <span className="font-normal  text-xs">B) Tüm veriler açıkça görülebilir ve değiştirilebilir.</span>
-        <span className="font-normal  text-xs">C) İşlem hızını artırır.</span>
-        <span className="font-normal  text-xs">D) İşlemlerin gizliliğini korur ve değişmez bir kayıt tutar</span>
-        </div>
-        </div>
-  )
 }

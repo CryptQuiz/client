@@ -11,7 +11,6 @@ const AddQuizGroups = () => {
   const handleInputChange = (key, value) => {
     console.log("key", key);
     console.log("vale", value);
-
     dispatch(setQuizDataByKey({ key, value }));
     console.log("data", quizData);
   };
@@ -48,7 +47,12 @@ const AddQuizGroups = () => {
           ></input>
         </div>
       </div>
-
+      <button
+        className="h-10 w-10 bg-red-600"
+        onClick={() => console.log("test buttonu", quizData.questions)}
+      >
+        test butonu
+      </button>
       <AddQuestion />
     </div>
   );
