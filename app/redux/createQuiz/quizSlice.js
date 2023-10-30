@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  quiz: {
+    quiz: {
     name: "",
-date:"",
+    date:"",
+    time:"",
     truechoice:0,
     questions: [
       {
@@ -15,7 +16,6 @@ date:"",
           },
        
         ],
-
         
       },
     ],
