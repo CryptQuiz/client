@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useEffect } from "react";
 
@@ -21,9 +22,28 @@ export default function Page() {
         <CreateQuiz />
         <Statistics />
       </div>
+=======
+import React from "react";
+import CreateQuiz from "./components/CreateQuiz";
+import Statistics from "./components/Statistics";
+import Quizs from "./components/Quizs";
+const page = () => {
+  return (
+    <div className="flex flex-row p-14 h-full space-x-8 w-full">
+      <div className=" h-full min-w-[30vw] overflow-hidden flex flex-col space-y-3">
+  <CreateQuiz />
+  <Statistics />
+</div>
+>>>>>>> 02c97db9112bf35deb0ae49d0fb6b6fe0eb01bfd
       <div className="flex flex-col h-full w-full">
         <Quizs />
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default page;
+>>>>>>> 02c97db9112bf35deb0ae49d0fb6b6fe0eb01bfd
