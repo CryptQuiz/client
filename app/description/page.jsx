@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import useScreenSize from '@/hooks/useScreenSize';
-import HeaderTime from '@/components/HeaderTime/headerTime';
+import HeaderTime from '@/components/HeaderTime/HeaderTime';
 import Join from '@/components/Join/Join';
 import JoinSponsor from '@/components/JoinSponsor/JoinSponsor';
 import Stats from '@/components/Stats/Stats';
