@@ -18,8 +18,8 @@
     "storken-storage": "^1.0.8",
     "yarn": "^1.22.19",
     "swiper": "^10.3.1",
-    "iconsax-react": "^0.0.8"
-  
+    "iconsax-react": "^0.0.8",
+    "supports-color": "8.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10",
