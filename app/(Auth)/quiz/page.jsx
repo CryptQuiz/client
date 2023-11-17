@@ -7,14 +7,19 @@ import Sponsor from "@/components/Sponsor/Sponsor";
 import SponsorName from "@/components/SponsorName/SponsorName";
 import Advert from "@/components/Advert/Advert";
 import LeaderBoard from "@/components/LeaderBoard/LeaderBoard";
+import QuizName from "@/components/DashboardQuizsPopUp/QuizName";
 
+//"const socket = socketIOClient("http://localhost:8000");
+const socket = socketIOClient("https://quiz-ws-server-a25e2a4e63e7.herokuapp.com");
 export default function Page() {
-  const socket = socketIOClient("https://quiz-ws-server-a25e2a4e63e7.herokuapp.com");
+  //const socket = socketIOClient("https://quiz-ws-server-a25e2a4e63e7.herokuapp.com");
+  
   const [username, setUsername] = useState("");
   const [question, setQuestion] = useState(null);
+  const [quizName, setQuizName] = useState("tuNNcay Quiz");
   const [options, setOptions] = useState(["1", "2", "3", "4"]);
   const [trueAnswer, setTrueAnswer] = useState("");
-  const [userAnswer, setUserAnswer] = useState("");
+  const [userAnswer, setUserAnswer] = useState(""); 
   const [countDown, setCountDown] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState("");
   const [width, setWidth] = useState(100);
@@ -24,6 +29,8 @@ export default function Page() {
   const [advertImage, setAdvertImage] = useState("/images/chaingptadvert.jpeg");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [totalQuestionNumber, setTotalQuestionNumber] = useState(0);
+  const [userScore, setUserScore] = useState(0);
+  const [onlineUser, setOnlineUser] = useState(0);
 
   const colors = [
     "bg-neu-pink4",
@@ -31,24 +38,40 @@ export default function Page() {
     "bg-neu-purple3",
     "bg-neu-blue3",
   ];
+  const optionType = [
+    "A",
+    "B",
+    "C",
+    "D",
+  ];
+
 
   useEffect(() => {
     setWidth(100 - (10 - countDown) * 10);
   }, [countDown]);
+  useEffect(() => {
+    
+    if(trueAnswer!=="")
+    {
+      if (userAnswer.toLowerCase() === trueAnswer.toLowerCase())
+      {
+        socket.emit("increaseScore");
+        console.log("Cevap doğru", userAnswer);
+      }
+    }
+  }, [trueAnswer]);
 
   useEffect(() => {
+  
     socket.emit("setParams", { username: window.ethereum.selectedAddress });
-    console.log(window.ethereum.selectedAddress);
+
     socket.emit("joinRoom", "tuNNcay");
-  }, []);
-
-  socket.on("question", (question) => {
-    setQuestion(question);
-    setTrueAnswer("");
-    setUserAnswer("");
-  });
-
-  socket.on("currentQuestionIndex", (currentQuestionIndex) => {
+    socket.on("question", (question) => {
+      setQuestion(question);
+      setTrueAnswer("");
+      setUserAnswer("");
+    });
+    socket.on("currentQuestionIndex", (currentQuestionIndex) => {
     let optionsArray = String(currentQuestionIndex).split(",");
     setCurrentQuestionIndex(optionsArray[0]);
     setTotalQuestionNumber(optionsArray[1]);
@@ -56,19 +79,31 @@ export default function Page() {
 
   socket.on("advertisingImage", (advertisingImage) => {
     setAdvertImage(String(advertisingImage));
-    console.log(advertImage);
+
+  });
+  socket.on("onlineUser", (onlineuser) => {
+    setOnlineUser(parseInt(onlineuser));
+
+  });
+  socket.on("quizName", (quizname) => {
+    setQuizName(String(quizname));
+  });
+  socket.on("userScore", (score) => {
+
+    setUserScore(parseInt(score));
   });
 
   socket.on("options", (options) => {
+
     let optionsArray = String(options).split(",");
     setOptions([optionsArray[0], optionsArray[1], optionsArray[2], optionsArray[3]]);
   });
 
   socket.on("answer", (answer) => {
+    
     setTrueAnswer(String(answer));
-    if (selectedOptions.toLowerCase() === String(answer).toLowerCase()) {
-      socket.emit("increaseScore");
-    }
+
+  
   });
 
   socket.on("waiting", (waiting) => {
@@ -76,23 +111,25 @@ export default function Page() {
   });
 
   socket.on("gameOver", (sortedUsers) => {
-    console.log("Sıralanmış Kullanıcılar :", sortedUsers);
+
     setIsGameOver(1);
 
     setSortedUsers(sortedUsers);
-    sortedUsers.forEach((user, index) => {
-      console.log(
-        `Sıra ${index + 1}: Kullanıcı Adı: ${user.username}, Puan: ${user.score}`
-      );
-    });
+   
   });
 
   socket.on("countdown", (message) => {
     setCountDown(message);
   });
+  }, []);
+
+  
+
+  
 
   const optionSelected = (selectedOption) => {
-    console.log(selectedOption);
+    
+
     setUserAnswer(selectedOption);
   };
 
@@ -118,6 +155,7 @@ export default function Page() {
             alt="images"
             fill
           />
+        
         </div>
         <div className="w-[81vw] lg:w-[60vw] py-4 lg:py-0 mx-4 lg:m-0">
           {isGameOver !== 0 ? (
@@ -127,10 +165,13 @@ export default function Page() {
               {isWaiting === 0 ? (
                 <>
                   <div className="h-[8vh] lg:h-[12vh]">
-                    <SponsorName sponsorName="ETH Quiz Competition" />
+                    <SponsorName sponsorName={quizName} />
+                    
                   </div>
                   <p className="bg-red-500 text-white px-4 py-2 rounded-md">
-                    Kalan süre: {countDown}
+                    Kalan süre: {countDown} online user {onlineUser}
+                    
+         {userAnswer}   
                   </p>
                   <div>
                     <div className="h-[22vh] lg:h-[25vh] bg-neu-orange mb-4 lg:mb-8 flex flex-row relative items-center justify-center rounded-20 border border-black border-r-4 border-b-4">
@@ -150,12 +191,15 @@ export default function Page() {
                       </div>
 
                       <div className="w-20 h-20 hidden lg:block absolute -top-10 -right-10">
+                        
                         <Image
                           src="/images/star.png"
                           alt="quiz"
                           width={80}
                           height={80}
                         />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black font-bold text-lg">{userScore}</div>
+
                       </div>
                     </div>
 
@@ -176,12 +220,12 @@ export default function Page() {
       ? "bg-gray-500"
       : option === trueAnswer
       ? "bg-green-500"
-      : "bg-red-500"
+      : colors[index]
   } items-center space-x-5 rounded-20 border border-black hover:border-none border-r-4 border-b-4 duration-100 cursor-pointer`}
 >
 
 
-                            <div className="text-40 pl-4">A</div>
+                            <div className="text-40 pl-4">{optionType[index]}</div>
                             <div>{option}</div>
                           </motion.button>
                         </div>
